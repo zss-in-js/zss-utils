@@ -1,6 +1,6 @@
 {
   "name": "style-preset",
-  "version": "0.0.1",
+  "version": "0.0.14",
   "description": "Utility and presets for CSS-in-JS libraries",
   "keywords": [
     "style",
