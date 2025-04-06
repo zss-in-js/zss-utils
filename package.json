@@ -1,15 +1,15 @@
 {
-  "name": "style-preset",
-  "version": "0.0.14",
-  "description": "Utility and presets for CSS-in-JS libraries",
+  "name": "zss-utils",
+  "version": "0.0.1",
+  "description": "Zero-runtime StyleSheet Utilities",
   "keywords": [
-    "style",
-    "css-in-js",
-    "utils",
-    "preset"
+    "zero-runtime",
+    "stylesheet",
+    "utilities",
+    "css-in-js"
   ],
   "author": "Refirst",
-  "repository": "github:zss-in-js/style-preset",
+  "repository": "github:zss-in-js/zss-utils",
   "license": "MIT",
   "sideEffects": false,
   "exports": {
@@ -35,7 +35,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "zss-engine": "^0.2.26"
+  },
   "devDependencies": {
+    "@types/node": "^22.14.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.2"
   }
