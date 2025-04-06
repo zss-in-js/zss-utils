@@ -1,6 +1,6 @@
 {
   "name": "zss-utils",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Zero-runtime StyleSheet Utilities",
   "keywords": [
     "zero-runtime",
@@ -30,17 +30,22 @@
   "scripts": {
     "build": "rimraf dist types && pnpm esm && pnpm cjs",
     "cjs": "tsc --project tsconfig.cjs.json",
-    "esm": "tsc --project tsconfig.esm.json"
+    "esm": "tsc --project tsconfig.esm.json",
+    "test": "jest"
   },
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.3.1",
+    "typescript": "^5.8.2",
     "zss-engine": "^0.2.26"
   },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.8.2"
+  "peerDependencies": {
+    "zss-engine": ">=0.2.26"
   }
 }
