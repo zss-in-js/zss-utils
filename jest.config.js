@@ -7,7 +7,7 @@ module.exports = {
   },
   roots: ['<rootDir>/test'],
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   coverageReporters: ['text', 'html'],
   reporters: [['github-actions', { silent: false }], 'summary'],
 };

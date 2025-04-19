@@ -1,4 +1,4 @@
-import { cx } from '../src/utils/cx';
+import { cx } from '../src/utils/functions/cx';
 
 test('cx returns a string', () => {
   const result = cx('test', '', false, undefined, 'abc');
