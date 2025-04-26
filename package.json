@@ -1,6 +1,6 @@
 {
   "name": "zss-utils",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Zero-runtime StyleSheet Utilities",
   "keywords": [
     "zero-runtime",
@@ -34,7 +34,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "zss-engine": "^0.2.26"
+    "zss-engine": "^0.2.27"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
