@@ -10,5 +10,5 @@ export { defineThemeVars } from './utils/methods/define-theme-vars.js';
 export { keyframes } from './utils/methods/keyframes.js';
 export { buildCreate } from './utils/methods/create-build-helper.js';
 export { buildGlobal } from './utils/methods/global-build-helper.js';
-export { isDevelopment, injectServerCSS, getServerCSS } from 'zss-engine';
+export { isDevelopment, getServerCSS } from 'zss-engine';
 export type { CreateStyle, CustomHTMLType, CustomProperties, KeyframesDefinition, ReturnType, VarsDefinition } from 'zss-engine';
