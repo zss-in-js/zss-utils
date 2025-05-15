@@ -23,7 +23,7 @@ function darken(color: string, amount: string | number): string {
   return `color-mix(in srgb, ${color}, #000 ${percentageAmount}%)`;
 }
 
-export const colors = {
+export const color = {
   lighten,
   darken,
 };

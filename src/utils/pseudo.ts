@@ -1,16 +1,13 @@
 // Functional classes
 const dir = (str: string) => `:dir(${str})` as ':dir()';
 const has = (str: string) => `:has(${str})` as ':has()';
-const hostContext = (str: string) =>
-  `:host-context(${str})` as ':host-context()';
+const hostContext = (str: string) => `:host-context(${str})` as ':host-context()';
 const host = (str: string) => `:host(${str})` as ':host()';
 const is = (str: string) => `:is(${str})` as ':is()';
 const lang = (str: string) => `:lang(${str})` as ':lang()';
 const nthChild = (str: string) => `:nth-child(${str})` as ':nth-child()';
-const nthLastChild = (str: string) =>
-  `:nth-last-child(${str})` as ':nth-last-child()';
-const nthLastOfType = (str: string) =>
-  `:nth-last-of-type(${str})` as ':nth-last-of-type()';
+const nthLastChild = (str: string) => `:nth-last-child(${str})` as ':nth-last-child()';
+const nthLastOfType = (str: string) => `:nth-last-of-type(${str})` as ':nth-last-of-type()';
 const nthOfType = (str: string) => `:nth-of-type(${str})` as ':nth-of-type()';
 const not = (str: string) => `:not(${str})` as ':not()';
 const state = (str: string) => `:state(${str})` as ':state()';
@@ -21,16 +18,12 @@ const cue = (str: string) => `::cue(${str})` as '::cue()';
 const highlight = (str: string) => `::highlight(${str})` as '::highlight()';
 const part = (str: string) => `::part(${str})` as '::part()';
 const slotted = (str: string) => `::slotted(${str})` as '::slotted()';
-const viewTransitionOld = (str: string) =>
-  `::view-transition-old(${str})` as '::view-transition-old()';
-const viewTransitionNew = (str: string) =>
-  `::view-transition-new(${str})` as '::view-transition-new()';
-const viewTransitionGroup = (str: string) =>
-  `::view-transition-group(${str})` as '::view-transition-group()';
-const viewTransitionImagePair = (str: string) =>
-  `::view-transition-image-pair(${str})` as '::view-transition-image-pair()';
+const viewTransitionOld = (str: string) => `::view-transition-old(${str})` as '::view-transition-old()';
+const viewTransitionNew = (str: string) => `::view-transition-new(${str})` as '::view-transition-new()';
+const viewTransitionGroup = (str: string) => `::view-transition-group(${str})` as '::view-transition-group()';
+const viewTransitionImagePair = (str: string) => `::view-transition-image-pair(${str})` as '::view-transition-image-pair()';
 
-export const pseudo = {
+const pseudoStrings = {
   // Pseudo-classes
   // A
   active: ':active',
@@ -161,7 +154,10 @@ export const pseudo = {
 
   // V
   viewTransition: '::view-transition',
+} as const;
 
+export const pseudo = {
+  ...pseudoStrings,
   fn: {
     // Functional pseudo-classes
     cue,
@@ -188,4 +184,4 @@ export const pseudo = {
     viewTransitionOld,
     viewTransitionNew,
   },
-} as const;
+};
