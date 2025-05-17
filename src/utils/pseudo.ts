@@ -1,27 +1,29 @@
+type ReturnType<S extends string, V extends string> = `${V}(${S})`;
+
 // Functional classes
-const dir = (str: string) => `:dir(${str})` as ':dir()';
-const has = (str: string) => `:has(${str})` as ':has()';
-const hostContext = (str: string) => `:host-context(${str})` as ':host-context()';
-const host = (str: string) => `:host(${str})` as ':host()';
-const is = (str: string) => `:is(${str})` as ':is()';
-const lang = (str: string) => `:lang(${str})` as ':lang()';
-const nthChild = (str: string) => `:nth-child(${str})` as ':nth-child()';
-const nthLastChild = (str: string) => `:nth-last-child(${str})` as ':nth-last-child()';
-const nthLastOfType = (str: string) => `:nth-last-of-type(${str})` as ':nth-last-of-type()';
-const nthOfType = (str: string) => `:nth-of-type(${str})` as ':nth-of-type()';
-const not = (str: string) => `:not(${str})` as ':not()';
-const state = (str: string) => `:state(${str})` as ':state()';
-const where = (str: string) => `:where(${str})` as ':where()';
+const dir = <S extends string>(str: S): ReturnType<S, ':dir'> => `:dir(${str})`;
+const has = <S extends string>(str: S): ReturnType<S, ':has'> => `:has(${str})`;
+const hostContext = <S extends string>(str: S): ReturnType<S, ':host-context'> => `:host-context(${str})`;
+const host = <S extends string>(str: S): ReturnType<S, ':host'> => `:host(${str})`;
+const is = <S extends string>(str: S): ReturnType<S, ':is'> => `:is(${str})`;
+const lang = <S extends string>(str: S): ReturnType<S, ':lang'> => `:lang(${str})`;
+const nthChild = <S extends string>(str: S): ReturnType<S, ':nth-child'> => `:nth-child(${str})`;
+const nthLastChild = <S extends string>(str: S): ReturnType<S, ':nth-last-child'> => `:nth-last-child(${str})`;
+const nthLastOfType = <S extends string>(str: S): ReturnType<S, ':nth-last-of-type'> => `:nth-last-of-type(${str})`;
+const nthOfType = <S extends string>(str: S): ReturnType<S, ':nth-of-type'> => `:nth-of-type(${str})`;
+const not = <S extends string>(str: S): ReturnType<S, ':not'> => `:not(${str})`;
+const state = <S extends string>(str: S): ReturnType<S, ':state'> => `:state(${str})`;
+const where = <S extends string>(str: S): ReturnType<S, ':where'> => `:where(${str})`;
 
 // Functional element
-const cue = (str: string) => `::cue(${str})` as '::cue()';
-const highlight = (str: string) => `::highlight(${str})` as '::highlight()';
-const part = (str: string) => `::part(${str})` as '::part()';
-const slotted = (str: string) => `::slotted(${str})` as '::slotted()';
-const viewTransitionOld = (str: string) => `::view-transition-old(${str})` as '::view-transition-old()';
-const viewTransitionNew = (str: string) => `::view-transition-new(${str})` as '::view-transition-new()';
-const viewTransitionGroup = (str: string) => `::view-transition-group(${str})` as '::view-transition-group()';
-const viewTransitionImagePair = (str: string) => `::view-transition-image-pair(${str})` as '::view-transition-image-pair()';
+const cue = <S extends string>(str: S): ReturnType<S, '::cue'> => `::cue(${str})`;
+const highlight = <S extends string>(str: S): ReturnType<S, '::highlight'> => `::highlight(${str})`;
+const part = <S extends string>(str: S): ReturnType<S, '::part'> => `::part(${str})`;
+const slotted = <S extends string>(str: S): ReturnType<S, '::slotted'> => `::slotted(${str})`;
+const viewTransitionOld = <S extends string>(str: S): ReturnType<S, '::view-transition-old'> => `::view-transition-old(${str})`;
+const viewTransitionNew = <S extends string>(str: S): ReturnType<S, '::view-transition-new'> => `::view-transition-new(${str})`;
+const viewTransitionGroup = <S extends string>(str: S): ReturnType<S, '::view-transition-group'> => `::view-transition-group(${str})`;
+const viewTransitionImagePair = <S extends string>(str: S): ReturnType<S, '::view-transition-image-pair'> => `::view-transition-image-pair(${str})`;
 
 const pseudoStrings = {
   // Pseudo-classes
@@ -96,7 +98,7 @@ const pseudoStrings = {
   readWrite: ':read-write',
   required: ':required',
   right: ':right',
-  root: 'root',
+  root: ':root',
 
   // S
   scope: ':scope',
