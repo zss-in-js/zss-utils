@@ -1,6 +1,6 @@
 {
   "name": "zss-utils",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Zero-runtime StyleSheet Utilities",
   "keywords": [
     "zero-runtime",
@@ -15,26 +15,22 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "default": "./dist/cjs/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
     }
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "types/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist/",
-    "types/"
+    "dist/"
   ],
   "scripts": {
-    "build": "rimraf dist types && pnpm esm && pnpm cjs",
-    "cjs": "tsc --project tsconfig.cjs.json",
-    "esm": "tsc --project tsconfig.esm.json",
-    "test": "jest"
+    "build": "tsdown"
   },
   "devDependencies": {
-    "rimraf": "^6.0.1",
+    "tsdown": "^0.11.12",
     "typescript": "^5.8.2"
   }
 }
