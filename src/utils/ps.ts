@@ -158,7 +158,7 @@ const pseudoStrings = {
   viewTransition: '::view-transition',
 } as const;
 
-export const pseudo = {
+export const ps = {
   ...pseudoStrings,
   fn: {
     // Functional pseudo-classes
